@@ -3,8 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>City Mistri — Aluminium Folding Door, Shower Enclosure, Glass Partition</title>
-  <meta name="description" content="City Mistri — Trusted installers of Aluminium Folding Doors, Shower Enclosures and Glass Partitions in Dhaka. Professional design & installation. Call 01997426656." />
+  <title>City Mistri — Premium Aluminium Folding Door & Glass Solutions</title>
+  <meta name="description" content="City Mistri provides premium Aluminium Folding Doors, Shower Enclosures and Glass Partitions in Dhaka. Design to installation with warranty. Call 01997426656." />
+  <meta name="keywords" content="Aluminium Folding Door, Shower Enclosure, Glass Partition, City Mistri, Door Installation, Dhaka" />
+  <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -21,7 +23,7 @@
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#about">About</a>
-        <a href="#contact" class="btn">Contact: 01997426656</a>
+        <a href="#contact" class="btn">Contact</a>
       </nav>
     </div>
   </header>
@@ -36,7 +38,7 @@
         <p>Strong • Stylish • Space Saving — Design থেকে Installation পর্যন্ত একদম প্রফেশনাল।</p>
         <div class="cta-row">
           <a href="tel:+8801997426656" class="cta-primary">Call Now — 01997426656</a>
-          <a href="https://wa.me/8801997426656" class="cta-secondary">WhatsApp</a>
+          <a href="https://wa.me/8801997426656" class="cta-secondary" target="_blank">WhatsApp</a>
         </div>
         <div class="verified">
           <span class="tick">✔</span> Facebook Verified Business
@@ -85,18 +87,42 @@
     </div>
   </section>
 
+  <section id="about" class="section about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h3>About City Mistri</h3>
+        <p>City Mistri is a trusted home solutions provider in Dhaka specializing in Aluminium Folding Doors, Shower Enclosures and Glass Partitions. We handle everything from design to professional installation.</p>
+        <ul>
+          <li>Experienced technicians</li>
+          <li>Quality materials & warranty</li>
+          <li>Fast service across the city</li>
+        </ul>
+      </div>
+      <div class="about-media">
+        <img src="assets/about-team.jpg" alt="Team Photo" />
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="section contact">
     <div class="container contact-inner">
       <div class="contact-card">
         <h3>Contact Us</h3>
         <p>📍 Kazipara Metro Station, Dhaka 1216</p>
         <p>📞 <a href="tel:+8801997426656">01997426656</a>  |  🌐 <a href="https://citymistry.xyz" target="_blank" rel="noopener">citymistry.xyz</a></p>
+
+        <div class="map">
+          <!-- Google Maps embed (Kazipara Metro Station) -->
+          <iframe src="https://www.google.com/maps?q=Kazipara%20Metro%20Station%20Dhaka&output=embed" width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </div>
+
       <aside class="quick-contact">
         <div class="card">
           <h4>Quick Contact</h4>
           <a class="quick-call" href="tel:+8801997426656">📞 Call 01997426656</a>
-          <a class="quick-wa" href="https://wa.me/8801997426656">💬 WhatsApp</a>
+          <a class="quick-wa" href="https://wa.me/8801997426656" target="_blank">💬 WhatsApp</a>
+          <a class="quick-fb" href="https://www.facebook.com/citymistribd" target="_blank">🔵 Facebook Page</a>
         </div>
       </aside>
     </div>
@@ -105,7 +131,18 @@
   <footer class="site-footer">
     <div class="container">
       <div>© <strong>City Mistri</strong> — All Rights Reserved</div>
+      <div>Designed & Maintained by City Mistri</div>
     </div>
   </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float" href="https://wa.me/8801997426656" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+  <script>
+    // smooth scroll nav
+    document.querySelectorAll('.nav a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{ e.preventDefault(); document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'}); });
+    });
+  </script>
 </body>
 </html>

@@ -1,16 +1,18 @@
-# City Mistri - Static Website (Ready to Deploy)
-This repository contains a ready-to-deploy static website for City Mistri (Aluminium Folding Door, Shower Enclosure, Glass Partition).
-Replace the placeholder images under `assets/` with your real photos and update the Formspree action and Google Maps embed in `index.html`.
+# City Mistri - Final Polished Website (GitHub push ready)
+This is the final polished version of the City Mistri static website.
+Features included:
+- WhatsApp floating button (01997426656)
+- Google Maps embed (Kazipara Metro Station, Dhaka)
+- Footer Facebook page link (https://www.facebook.com/citymistribd)
+- SEO meta title and description
+- Ready to push to GitHub & deploy on Vercel
 
-## Files
-- index.html
-- styles.css
-- assets/ (place your images here)
+## How to use
+1. Replace images inside `assets/` with your real photos (logo.gif, hero-folding.jpg, etc).
+2. Commit & push to your GitHub repo:
+   git add .
+   git commit -m "Final polished version with WhatsApp + Map + FB link"
+   git push
 
-## Deploy (Vercel recommended)
-1. Create a new GitHub repository and push all files.
-2. Sign in to Vercel, import the GitHub repo and deploy (framework: Other -> Static).
-3. Add your custom domain (citymistry.xyz) in Vercel settings and update DNS records.
-
-## Contact
-If you want, I can push this repo and connect to Vercel for you — share GitHub access or add me as collaborator.
+## Deploy
+Import the repo to Vercel and deploy.
