@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About Us - City Mistri | Leading Glass & Interior Solution in Bangladesh</title>
+    <meta name="description" content="City Mistri is Bangladesh's most trusted Thai Glass, Aluminum & Interior renovation company. We serve Corporate Offices & Luxury Homes across 64 districts.">
+    
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-042TGM4N1G"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-042TGM4N1G');
+    </script>
+
+    <style>
+        /* Specific Styles for Professional About Page */
+        .about-hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('images/service6.jpg'); /* Background Image */
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            color: #fff;
+        }
+        .about-hero h1 { font-size: 3rem; margin-bottom: 10px; font-weight: 700; }
+        .about-hero p { font-size: 1.2rem; opacity: 0.9; }
+
+        .about-content-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            padding: 80px 0;
+        }
+        .about-text h2 {
+            font-size: 2.2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+        .about-text h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #007bff;
+            margin-top: 5px;
+        }
+        .about-text p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .about-img-box {
+            position: relative;
+        }
+        .about-img-box img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .experience-badge {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: #007bff;
+            color: #fff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .experience-badge span { font-size: 2.5rem; font-weight: 700; display: block; line-height: 1; }
+        .experience-badge small { font-size: 1rem; text-transform: uppercase; }
+
+        /* Core Values */
+        .values-section { background: #f8fbff; padding: 80px 0; text-align: center; }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .value-card {
+            background: #fff;
+            padding: 40px 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        .value-card:hover { transform: translateY(-10px); border-bottom-color: #007bff; }
+        .value-card i { font-size: 3rem; color: #007bff; margin-bottom: 20px; }
+        .value-card h3 { font-size: 1.4rem; color: #2c3e50; margin-bottom: 15px; }
+
+        @media (max-width: 900px) {
+            .about-content-row { grid-template-columns: 1fr; }
+            .experience-badge { left: 10px; bottom: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar" style="background-color: #0A192F; color: #fff; padding: 8px 0; font-size: 0.9rem;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="top-contact" style="display: flex; gap: 15px;">
+                <a href="tel:+8801997426656" style="color: #fff; text-decoration: none;"><i class="fas fa-phone-alt"></i> 01997426656</a>
+                <a href="mailto:info@citymistri.com" style="color: #fff; text-decoration: none; display: none; @media(min-width: 600px){display:inline;}"><i class="fas fa-envelope"></i> info@citymistri.com</a>
+            </div>
+            <div class="top-social" style="font-size: 0.85rem;">
+                <span><i class="fas fa-check-circle" style="color: #25d366;"></i> ISO Standard Service Provider</span>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo-link">
+                <img src="images/favicon.png" alt="City Mistri Logo" class="logo-img">
+            </a>
+            <nav class="primary-navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="offers.html" style="color: #ff4d4d;">Offers</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>We Build Trust with Glass</h1>
+            <p>আপনার স্বপ্নের স্পেস সাজাতে আমরাই আপনার বিশ্বস্ত সঙ্গী</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="about-content-row">
+            
+            <div class="about-img-box">
+                <img src="images/about-us-team.png" alt="City Mistri Office Work">
+                <div class="experience-badge">
+                    <span>10+</span>
+                    <small>Years of<br>Excellence</small>
+                </div>
+            </div>
+
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>
+                    <strong>City Mistri</strong> শুধুমাত্র একটি সার্ভিস প্রোভাইডার নয়, আমরা আধুনিক ইন্টেরিয়র সলিউশনের এক নতুন অধ্যায়। ঢাকা শহরের মিরপুর থেকে যাত্রা শুরু করে আমাদের সততা এবং কাজের মানের কারণে আজ আমরা সারা বাংলাদেশে <strong>Thai Glass, Aluminum & Interior Solution</strong>-এর জন্য একটি নির্ভরযোগ্য নাম।
+                </p>
+                <p>
+                    আমরা বিশ্বাস করি, একটি সুন্দর অফিস বা বাসা শুধুমাত্র ইট-পাথরের কাঠামো নয়, এটি আপনার রুচি ও ব্যক্তিত্বের প্রকাশ। তাই আমরা আমাদের ক্লায়েন্টদের দিই সর্বোচ্চ মানের <strong>Tempered Glass Partition</strong>, <strong>Shower Enclosure</strong> এবং <strong>Modern Folding Door</strong> সলিউশন।
+                </p>
+                <p>
+                    আমাদের টিমে রয়েছে দেশের সেরা কারিগর এবং ইঞ্জিনিয়ার, যারা প্রতিটি প্রজেক্টকে নিখুঁতভাবে ফুটিয়ে তোলে।
+                </p>
+                
+                <a href="portfolio.html" class="btn btn-primary" style="background-color: #007bff; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 10px;">View Our Works</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; color: #2c3e50; margin-bottom: 10px;">Why Choose City Mistri?</h2>
+                <div style="width: 80px; height: 4px; background: #007bff; margin: 0 auto 20px auto;"></div>
+                <p style="color: #666;">আমরা গতানুগতিক মিস্ত্রি সেবার ধারণা বদলে দিয়েছি। আমাদের কাছে গ্রাহকের সন্তুষ্টিই শেষ কথা।</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-gem"></i>
+                    <h3>Premium Quality</h3>
+                    <p>আমরা কাজের মানের ক্ষেত্রে জিরো টলারেন্স নীতি মেনে চলি। সেরা কাঁচামাল (KAI/PHP Aluminum) ব্যবহার আমাদের প্রতিশ্রুতি।</p>
+                </div>
+
+                <div class="value-card">
+                    <i class="fas fa-user-clock"></i>
+                    <h3>On-Time Delivery</h3>
+                    <p>প্রজেক্ট ছোট হোক বা বড়, আমরা নির্ধারিত সময়ের মধ্যে কাজ হস্তান্তর করতে বদ্ধপরিকর। আপনার সময়ের মূল্য আমাদের কাছে অনেক।</p>
+                </div>
+
+                <div class="value-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>Transparent Pricing</h3>
+                    <p>কোনো গোপন খরচ (Hidden Cost) নেই। আমরা কাজের শুরুতেই বিস্তারিত কোটেশন দিই, যাতে আপনি বাজেটে নিশ্চিন্ত থাকতে পারেন।</p>
+                </div>
+
+                <div class="value-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Expert Support</h3>
+                    <p>কাজ শেষ হওয়ার পরেও আমাদের সাপোর্ট টিম আপনার পাশে থাকে। আমরা দিচ্ছি নিশ্চিত আফটার সেলস সার্ভিস।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements" style="background: #0A192F; padding: 60px 0; color: white;">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3 class="counter" data-target="250">0</h3>
+                    <p>Projects Done</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-users"></i>
+                    <h3 class="counter" data-target="500">0</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3 class="counter" data-target="64">0</h3>
+                    <p>Districts Covered</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-award"></i>
+                    <h3 class="counter" data-target="100">0</h3>
+                    <p>% Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="text-align: center; padding: 80px 20px; background: #fff;">
+        <div class="container">
+            <h2 style="font-size: 2.2rem; color: #2c3e50; margin-bottom: 20px;">Ready to Renovate Your Space?</h2>
+            <p style="color: #555; max-width: 600px; margin: 0 auto 30px auto; font-size: 1.1rem;">আমাদের এক্সপার্ট টিমের সাথে আজই কথা বলুন এবং আপনার প্রজেক্টের জন্য সেরা পরামর্শ নিন।</p>
+            <a href="contact.html" class="btn" style="background-color: #25d366; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main container">
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Al Helal Hospital, Kazipara, Mirpur, Dhaka</p>
+                <p><i class="fas fa-phone-alt"></i> 01997426656</p>
+                <p><i class="fas fa-envelope"></i> info@citymistri.com</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/citymistribd"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/8801997426656"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Our Services</h3>
+                <ul>
+                    <li><a href="office-partition.html">Office Partition</a></li>
+                    <li><a href="shower-enclosure.html">Shower Enclosure</a></li>
+                    <li><a href="folding-door.html">Folding Door</a></li>
+                    <li><a href="repair-service.html">Glass Repair</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="blog.html">Blogs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© City Mistri 2025. All Rights Reserved. Built with ❤️ in Bangladesh.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

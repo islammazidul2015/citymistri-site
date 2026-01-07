@@ -1,0 +1,3179 @@
+/* Basic Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+/* Set scroll behavior for smooth anchor link clicking */
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Header and Navigation */
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.primary-navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.primary-navigation a:hover {
+    color: #007bff; /* Blue hover color */
+}
+/* New Slider Section Style */
+.slider-container {
+    width: 100%;
+    height: 90vh; /* Adjust height as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    width: 300%; /* 100% * 3 slides */
+    height: 100%;
+    transition: transform 0.7s ease-in-out;
+}
+
+.slide {
+    width: 33.333%; /* 100% / 3 slides */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    color: #f1f1f1;
+    margin-bottom: 2.5rem;
+}
+
+/* Slider Navigation Buttons */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 123, 255, 0.7);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/* Slider Dots */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #ffffff;
+}
+
+
+/* Call to Action Button with Blue Theme */
+.cta-button {
+    background-color: #007bff; /* Main blue color */
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);
+}
+
+/* Section Titles */
+h2 {
+    font-size: 2.8rem;
+    margin-bottom: 60px;
+    color: #2c3e50;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 80px;
+    height: 4px;
+    background-color: #007bff; /* Blue underline for titles */
+    border-radius: 2px;
+}
+
+/* Services Section */
+.services {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #ffffff; /* Pure white card background */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Deeper, softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #eee; /* Subtle border for clean lines */
+}
+
+.service-card:hover {
+    transform: translateY(-8px); /* Lift slightly less */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2); /* Stronger shadow on hover */
+    border-color: #007bff; /* Blue border accent on hover */
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 3px solid #007bff; /* New blue separator line */
+}
+
+.service-card h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin: 20px 15px 10px 15px;
+}
+
+.service-card p {
+    font-size: 1rem;
+    color: #555;
+    padding: 0 15px 25px 15px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 80px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.feature-item {
+    padding: 30px 20px;
+}
+
+.feature-icon {
+    margin-bottom: 20px;
+}
+
+.feature-icon i {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Achievements Section */
+.achievements {
+    background-color: #007bff;
+    padding: 60px 0;
+    color: #ffffff;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.stat-item i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.stat-item h3 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Working Process Section */
+.working-process {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    position: relative;
+}
+
+.process-step {
+    padding: 20px;
+}
+
+.step-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.step-icon span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.process-step h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.faq-section h2 {
+    text-align: center;
+}
+
+.faq-accordion {
+    max-width: 800px;
+    margin: 60px auto 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question i {
+    transition: transform 0.3s ease;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 20px;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding-bottom: 20px;
+    color: #555;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust as needed */
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.portfolio-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+.view-all-portfolio {
+    margin-top: 60px;
+    display: inline-block;
+}
+
+/* Latest Blog Section */
+.latest-blog {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.latest-blog h2 {
+    text-align: center;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.blog-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-content {
+    padding: 25px;
+}
+
+.blog-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.blog-content h3 {
+    font-size: 1.4rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.blog-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.read-more-blog {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.read-more-blog i {
+    font-size: 0.9em;
+    transition: transform 0.3s ease;
+}
+
+.read-more-blog:hover {
+    color: #0056b3;
+}
+
+.read-more-blog:hover i {
+    transform: translateX(5px);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* A light grey background */
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-top: 60px;
+    text-align: left;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-top: 4px solid #007bff; /* Blue accent */
+}
+
+.testimonial-card .stars {
+    color: #f39c12; /* Star color */
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.testimonial-card .quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.testimonial-card .quote::before {
+    content: '“';
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    font-size: 3rem;
+    color: #e0e0e0;
+    z-index: 1;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Circular photo */
+    object-fit: cover;
+}
+
+.client-info h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+.client-info span {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #007bff; /* Main blue color */
+    color: #ffffff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: #ffffff; /* Override default dark h2 color */
+    margin-bottom: 20px;
+}
+
+.cta-section h2::after {
+    background-color: #ffffff; /* White underline */
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 700px; /* To keep text from being too wide */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Special button style for CTA section */
+.cta-section .cta-button {
+    background-color: #ffffff; /* White button */
+    color: #007bff; /* Blue text */
+    transform: scale(1.1); /* Make it slightly larger */
+}
+
+.cta-section .cta-button:hover {
+    background-color: #f0f0f0; /* A slightly off-white on hover */
+    color: #0056b3;
+}
+
+/* New Footer Section Styling */
+footer {
+    background-image: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('images/footer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #a0aec0; /* Light grey text */
+    padding: 80px 0 0 0;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-col h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-col p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-col p i {
+    color: #007bff; /* Main blue color */
+    margin-top: 5px;
+}
+
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #4a5568;
+    border-radius: 5px;
+    color: #a0aec0;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: color 0.3s, padding-left 0.3s;
+}
+
+.footer-col ul li a::before {
+    content: '›';
+    margin-right: 8px;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 25px 0;
+    border-top: 1px solid #4a5568;
+    margin-top: 40px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+/* -------------------------- */
+/* --- মোবাইল রেসপন্সিভ --- */
+/* -------------------------- */
+
+/* হ্যামবার্গার মেন্যু বাটন (ডিফল্টভাবে লুকানো) */
+.mobile-nav-toggle {
+    display: none;
+    background: transparent;
+    border: 0;
+    color: #2c3e50; /* গাঢ় নীল */
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.mobile-nav-toggle .fa-times {
+    display: none; /* ক্লোজ আইকন ডিফল্টভাবে লুকানো */
+}
+
+/* স্ক্রিনের সাইজ ৮০০ পিক্সেল বা তার কম হলে এই কোড কাজ করবে */
+@media (max-width: 800px) {
+    
+    /* --- হেডার ও নেভিগেশন --- */
+    .primary-navigation {
+        position: fixed;
+        /* inset: top right bottom left */
+        inset: 0 0 0 30%; 
+        flex-direction: column;
+        padding: min(20vh, 10rem) 2rem;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        transform: translateX(100%);
+        transition: transform 0.3s ease-out;
+        z-index: 999;
+    }
+
+    .primary-navigation ul {
+        flex-direction: column;
+        gap: 2.5rem; /* মোবাইল মেন্যুতে লিঙ্কগুলোর মধ্যে ফাঁকা */
+    }
+
+    .primary-navigation ul a {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .mobile-nav-toggle {
+        display: block; /* হ্যামবার্গার বাটনটি এখন দেখা যাবে */
+    }
+
+    /* যখন মেন্যু খোলা থাকবে তখন যা হবে */
+    body.nav-open .primary-navigation {
+        transform: translateX(0%); /* মেন্যু স্লাইড হয়ে খুলবে */
+    }
+
+    body.nav-open .mobile-nav-toggle .fa-bars {
+        display: none; /* মেন্যু আইকন লুকাবে */
+    }
+
+    body.nav-open .mobile-nav-toggle .fa-times {
+        display: block; /* ক্লোজ আইকন দেখাবে */
+    }
+
+    /* --- স্লাইডার সেকশন --- */
+    .slider-container {
+        height: 70vh; /* মোবাইলে স্লাইডারের উচ্চতা কমানো হলো */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* মোবাইলে শিরোনাম ছোট করা হলো */
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    /* --- সাধারণ সেকশন --- */
+    h2 {
+        font-size: 2.2rem; /* সেকশন টাইটেল ছোট করা হলো */
+    }
+
+    .services, .why-choose-us, .working-process, .faq-section, .portfolio, .latest-blog, .testimonials, .cta-section {
+        padding: 60px 0; /* মোবাইলে সেকশনের প্যাডিং কমানো হলো */
+    }
+
+    /* --- গ্রিড (সবকিছু ১ কলামে) --- */
+    .service-grid,
+    .process-grid, 
+    .portfolio-grid, 
+    .blog-grid, 
+    .testimonial-grid, 
+    .footer-main {
+        grid-template-columns: 1fr; /* সব গ্রিডকে ১ কলামে আনা হলো */
+        gap: 20px;
+    }
+
+    .stats-grid {
+        /* শুধু অ্যাচিভমেন্ট সেকশন ২ কলামে থাকবে */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .features-grid {
+        /* "Why Choose Us" সেকশন ২ কলামে থাকবে */
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* --- ফুটার --- */
+    .footer-main {
+        text-align: center; /* মোবাইলে ফুটারের লেখা মাঝে আনা হলো */
+    }
+
+    .footer-col p {
+        justify-content: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+        display: flex;
+    }
+}
+
+/* খুব ছোট স্ক্রিনের জন্য (যেমন ৪৮০ পিক্সেল) */
+@media (max-width: 480px) {
+    .stats-grid,
+    .features-grid {
+        /* খুব ছোট মোবাইলে এগুলোকেও ১ কলামে আনা হলো */
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* অ্যাক্সেসিবিলিটির জন্য (স্ক্রিন রিডার) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* -------------------------- */
+/* --- Service Page Styles --- */
+/* -------------------------- */
+
+.page-header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.service-page-content {
+    padding: 80px 0;
+}
+
+.service-detail-box {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.service-detail-box h2 {
+    font-size: 2.2rem;
+    padding: 30px 40px 0 40px;
+    margin: 0;
+    text-align: left;
+}
+
+.service-detail-box h2::after {
+    display: none; /* Hide the underline for service boxes */
+}
+
+.service-detail-box p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    padding: 15px 40px 30px 40px;
+    margin: 0;
+}
+
+.service-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.service-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service-gallery img:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* ------------------------------- */
+/* --- Service Page Pro Upgrade --- */
+/* ------------------------------- */
+
+.service-page-container {
+    display: grid;
+    grid-template-columns: 280px 1fr; /* Sidebar width 280px, rest is content */
+    gap: 40px;
+}
+
+.service-sidebar {
+    position: sticky;
+    top: 120px; /* Adjust this value based on your header height */
+    height: calc(100vh - 140px); /* Full height minus some padding */
+    overflow-y: auto;
+}
+
+.service-sidebar h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+.service-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-nav li {
+    margin-bottom: 5px;
+}
+
+.service-nav a {
+    display: block;
+    text-decoration: none;
+    padding: 12px 15px;
+    color: #333;
+    font-weight: 500;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.service-nav a:hover {
+    background-color: #f0f0f0;
+}
+
+/* This 'active' class will be added by JavaScript */
+.service-nav a.active {
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.service-content {
+    /* Content area styling */
+}
+
+/* Individual CTA button for each service */
+.service-cta {
+    margin: 30px 40px 30px 40px;
+    display: inline-block;
+    background-color: #28a745; /* Green color for new CTA */
+}
+.service-cta:hover {
+    background-color: #218838;
+}
+
+/* Mobile Responsive for Service Page */
+@media (max-width: 900px) {
+    .service-page-container {
+        grid-template-columns: 1fr; /* Stack sidebar and content */
+    }
+
+    .service-sidebar {
+        position: relative;
+        top: 0;
+        height: auto;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 800px) {
+    .service-cta {
+        margin: 20px 25px 20px 25px;
+    }
+}
+
+
+/* ----------------------------- */
+/* --- Portfolio Page Styles (Upgraded) --- */
+/* ----------------------------- */
+
+.portfolio-page-content {
+    padding: 80px 0;
+}
+
+/* SEO Intro Text */
+.portfolio-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Filter Buttons Styling */
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-btn:hover {
+    background-color: #ddd;
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+/* Portfolio Gallery Grid (Upgraded to Card) */
+.portfolio-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.gallery-item-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 0.5s ease;
+}
+
+.gallery-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.gallery-image-box {
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.gallery-item-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.gallery-info h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin: 0 0 5px 0;
+}
+
+.gallery-info span {
+    font-size: 0.9rem;
+    color: #007bff;
+    font-weight: 500;
+}
+
+/* Class for hiding items with JS */
+.gallery-item-card.hide {
+    display: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* -------------------------- */
+/* --- Blog Page Styles --- */
+/* -------------------------- */
+
+.blog-page-content {
+    padding: 80px 0;
+}
+
+.blog-page-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2/3 for posts, 1/3 for sidebar */
+    gap: 40px;
+}
+
+/* Main Blog Posts Column */
+.blog-post-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.blog-post-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.blog-post-content {
+    padding: 30px;
+}
+
+.blog-post-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.blog-post-content h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin: 0 0 15px 0;
+    padding: 0;
+    display: block; /* Override inline-block */
+}
+
+.blog-post-content h2::after {
+    display: none; /* Hide default underline */
+}
+
+.blog-post-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* Blog Sidebar */
+.blog-sidebar {
+    position: sticky;
+    top: 120px; /* Adjust this value based on your header height */
+    height: calc(100vh - 140px);
+}
+
+.sidebar-widget {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.widget-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Search Widget */
+.search-form {
+    display: flex;
+    position: relative;
+}
+
+.search-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.search-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background: #007bff;
+    border: none;
+    color: #fff;
+    padding: 0 15px;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* List Widgets (Categories & Recent Posts) */
+.widget-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.widget-list li {
+    margin-bottom: 10px;
+}
+
+.widget-list li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.widget-list li a:hover {
+    color: #007bff;
+}
+
+.widget-list.recent-posts li {
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #eee;
+}
+.widget-list.recent-posts li:last-child {
+    border-bottom: none;
+}
+
+
+/* Mobile Responsive for Blog Page */
+@media (max-width: 900px) {
+    .blog-page-container {
+        grid-template-columns: 1fr; /* Stack sidebar and content */
+    }
+
+    .blog-sidebar {
+        position: relative;
+        top: 0;
+        height: auto;
+        margin-top: 40px;
+    }
+}
+
+
+/* ------------------------------- */
+/* --- Single Blog Post Styles --- */
+/* ------------------------------- */
+
+.blog-post-full {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.blog-post-full h1 {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+}
+
+.blog-post-full .blog-post-date {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.blog-post-img-full {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.post-content-body {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    color: #333;
+}
+
+.post-content-body h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.post-content-body p {
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------- */
+/* --- About Page Styles --- */
+/* -------------------------- */
+
+.about-page-content {
+    padding-top: 80px;
+    background-color: #ffffff;
+}
+
+.about-intro-section {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Image column and text column */
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-text h2::after {
+    display: none; /* Hide default underline */
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.mission-vision-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.mission-vision-card {
+    background-color: #f8f9fa; /* Light grey background */
+    padding: 35px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid #007bff;
+}
+
+.mission-vision-card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.mission-vision-card h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.mission-vision-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Mobile Responsive for About Page */
+@media (max-width: 900px) {
+    .about-intro-section {
+        grid-template-columns: 1fr; /* Stack image and text */
+    }
+}
+
+@media (max-width: 600px) {
+    .mission-vision-section {
+        grid-template-columns: 1fr; /* Stack mission and vision */
+    }
+}
+
+
+/* -------------------------- */
+/* --- Contact Page Styles --- */
+/* -------------------------- */
+
+.contact-page-content {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* Contact Info Grid */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 80px;
+}
+
+.contact-info-card {
+    background-color: #f8f9fa;
+    padding: 35px;
+    text-align: center;
+    border-radius: 10px;
+    border-bottom: 4px solid #007bff;
+}
+
+.contact-info-card i {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.contact-info-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.contact-info-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+}
+
+.contact-info-card .contact-highlight {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Contact Form and Map Section */
+.contact-form-map-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.contact-form-container h2 {
+    font-size: 2.5rem;
+    text-align: left;
+}
+.contact-form-container h2::after {
+    display: none; /* Hide default underline */
+}
+.contact-form-container p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important for padding to work correctly */
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .cta-button {
+    cursor: pointer;
+    border: none;
+}
+
+.google-map-container h2 {
+    font-size: 2.5rem;
+    text-align: left;
+}
+.google-map-container h2::after {
+    display: none; /* Hide default underline */
+}
+
+.google-map-container iframe {
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsive for Contact Page */
+@media (max-width: 900px) {
+    .contact-form-map-section {
+        grid-template-columns: 1fr; /* Stack form and map */
+    }
+    .google-map-container {
+        margin-top: 50px;
+    }
+}
+
+/* -------------------------- */
+/* --- Scroll Animation Styles --- */
+/* -------------------------- */
+
+/* এটি হলো সেকশনের প্রাথমিক অবস্থা (লুকানো) */
+.hidden-section {
+    opacity: 0;
+    transform: translateY(30px); /* নিচ থেকে হালকা উপরে উঠবে */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* এই ক্লাসটি জাভাস্ক্রিপ্ট দিয়ে যোগ করা হবে (দৃশ্যমান) */
+.show-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ------------------------------- */
+/* --- WhatsApp Floating Button --- */
+/* ------------------------------- */
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366; /* Official WhatsApp Green */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px; /* Icon size */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile view adjustment */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 25px;
+    }
+}
+/* ------------------------------------ */
+/* --- Facebook Messenger Float Button --- */
+/* ------------------------------------ */
+
+.messenger-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 110px; /* 40px (whatsapp bottom) + 60px (whatsapp height) + 10px gap */
+    right: 40px;
+    background-color: #0084FF; /* Official Messenger Blue */
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px; /* Icon size */
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.messenger-float:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile view adjustment for FB button */
+@media (max-width: 768px) {
+    .messenger-float {
+        width: 50px;
+        height: 50px;
+        bottom: 80px; /* 20px (whatsapp bottom) + 50px (whatsapp height) + 10px gap */
+        right: 20px;
+        font-size: 25px;
+    }
+}
+/* --------------------------------- */
+/* --- Premium Hero Slider Section --- */
+/* --------------------------------- */
+
+.hero-slider-premium {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Full viewport height for a grand look */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-wrapper-premium {
+    display: flex; /* Keep flex for initial layout, but slides will be absolute */
+    height: 100%;
+    width: 100%; /* Changed to 100% */
+    /* transition: transform 0.6s ease-in-out; */ /* Removed/Commented out */
+    position: relative; /* Added for absolute positioning of slides */
+}
+
+.slide-premium {
+    width: 100%; /* Changed back to 100% */
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute; /* Changed to absolute */
+    top: 0;
+    left: 0;
+    opacity: 0; /* New: Hidden by default */
+    transition: opacity 0.8s ease-in-out; /* New: Fade transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    z-index: 1; /* Ensure slides stack correctly */
+}
+
+.slide-premium.active { /* New: Active slide is visible */
+    opacity: 1;
+    z-index: 2; /* Active slide on top */
+}
+
+.slide-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+    animation: fadeInSlide 1s ease-out forwards; /* Text animation */
+}
+
+.slide-content h1 {
+    font-size: 3.5rem; /* Larger, more premium heading */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.slide-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Button Styling (if not already defined in your general btn-primary) */
+.slide-content .btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color); /* Uses your primary blue */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.slide-content .btn-primary:hover {
+    background-color: var(--dark-blue); /* A darker shade on hover */
+    transform: translateY(-3px);
+    border-color: var(--dark-blue);
+}
+
+.prev-btn-premium,
+.next-btn-premium {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 2rem;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Slightly rounded corners */
+}
+
+.prev-btn-premium:hover,
+.next-btn-premium:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.prev-btn-premium {
+    left: 20px;
+}
+
+.next-btn-premium {
+    right: 20px;
+}
+
+.slider-dots-premium {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slider-dots-premium .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+.slider-dots-premium .dot.active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeInSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for premium slider */
+@media (max-width: 768px) {
+    .hero-slider-premium {
+        height: 70vh; /* Adjust height for mobile */
+    }
+
+    .slide-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .slide-content p {
+        font-size: 1.1rem;
+    }
+
+    .slide-content .btn-primary {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .prev-btn-premium,
+    .next-btn-premium {
+        padding: 10px 15px;
+        font-size: 1.5rem;
+    }
+
+    .prev-btn-premium {
+        left: 10px;
+    }
+
+    .next-btn-premium {
+        right: 10px;
+    }
+
+    .slider-dots-premium {
+        bottom: 10px;
+        gap: 8px;
+    }
+    .slider-dots-premium .dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+/* ------------------------------- */
+/* --- Blog Post Navigation --- */
+/* ------------------------------- */
+
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eee;
+}
+
+.post-navigation a {
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    max-width: 48%;
+}
+
+.post-navigation a:hover strong {
+    color: #007bff;
+}
+
+.post-navigation a span {
+    display: block;
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.post-navigation a strong {
+    font-weight: 600;
+    color: #2c3e50;
+    transition: color 0.3s ease;
+}
+
+.post-navigation a.next-post {
+    text-align: right;
+}
+/* Additional Font Import (if you want a specific premium font, otherwise it uses default) */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap'); */
+/* If you uncomment the line above, add `font-family: 'Montserrat', sans-serif;` to h1, p etc. */
+/* ------------------------------- */
+/* --- Single Service Page Styles --- */
+/* ------------------------------- */
+
+.service-detail-content {
+    padding: 60px 0;
+    background-color: #fff;
+}
+.content-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+}
+.content-wrapper h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-align: left; /* Ensure h2 is left-aligned */
+}
+/* Override homepage h2 centering */
+.content-wrapper h2::after {
+    display: none;
+}
+
+.content-wrapper h3 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.content-wrapper p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.content-wrapper ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+.content-wrapper li {
+    margin-bottom: 10px;
+}
+.service-hero-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.cta-box {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 50px;
+    border: 1px solid #e9ecef;
+}
+/* ------------------------------------------- */
+/* --- Project Detail Modal (Lightbox) Styles --- */
+/* ------------------------------------------- */
+
+/* The Modal (background) */
+.modal-lightbox {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    padding: 20px;
+    animation: fadeInModal 0.3s ease-out;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 5% from the top and centered */
+    border-radius: 12px;
+    width: 90%; 
+    max-width: 1200px; /* Max width for a large screen */
+    box-shadow: 0 5px 30px rgba(0,0,0,0.4);
+    position: relative;
+    padding: 30px;
+    animation: slideInTop 0.4s ease-out;
+}
+
+/* Close Button */
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Inner Layout for Details */
+.modal-inner {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.modal-image-col {
+    flex: 2; /* Takes 60% of the space on desktop */
+}
+
+.modal-image-col img {
+    width: 100%;
+    height: auto;
+    max-height: 600px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-details-col {
+    flex: 1; /* Takes 40% of the space on desktop */
+    padding-top: 20px;
+}
+
+.modal-details-col h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.modal-details-col p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.modal-contact h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Custom CTA Button inside Modal */
+.modal-details-col .cta-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #25d366; /* WhatsApp Green */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.modal-details-col .cta-button:hover {
+    background-color: #128c7e;
+}
+
+.modal-details-col .cta-button i {
+    margin-right: 10px;
+}
+
+/* Responsive Styles for Modal */
+@media (max-width: 992px) {
+    .modal-content {
+        width: 95%;
+        margin: 2% auto;
+        padding: 20px;
+    }
+    .modal-inner {
+        flex-direction: column; /* Stacks columns vertically on tablet/mobile */
+    }
+    .modal-image-col,
+    .modal-details-col {
+        flex: none; 
+        width: 100%;
+    }
+    .modal-image-col img {
+        max-height: 400px;
+    }
+    .modal-details-col h2 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        margin: 10px auto;
+        padding: 15px;
+    }
+    .modal-details-col p {
+        font-size: 1rem;
+    }
+}
+
+/* Modal Animations */
+@keyframes fadeInModal {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* --- New Professional Portfolio Styles --- */
+
+/* Filter Buttons */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid #e0e0e0;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #007bff; /* Blue Theme */
+    border-color: #007bff;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Gallery Card Styling */
+.portfolio-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    animation: fadeIn 0.5s ease; /* Smooth entry animation */
+}
+
+.gallery-item-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Image Box */
+.gallery-image-box {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+}
+
+.gallery-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.gallery-item-card:hover .gallery-image-box img {
+    transform: scale(1.1); /* Zoom Effect */
+}
+
+/* Overlay Tag (Folding, Shower etc.) */
+.overlay-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    padding: 5px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Info Box (Text area) */
+.gallery-info {
+    padding: 20px 25px;
+    background: #fff;
+    border-top: 1px solid #f9f9f9;
+    text-align: left;
+}
+
+.gallery-info h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.gallery-info p {
+    font-size: 0.95rem;
+    color: #777;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Hide items when filtering */
+.gallery-item-card.hide {
+    display: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ------------------------------------------ */
+/* --- Mobile Responsive Polish (New) --- */
+/* ------------------------------------------ */
+
+@media (max-width: 768px) {
+    
+    /* Section Header Font Size Adjustment */
+    .section-header h2 {
+        font-size: 2rem !important; /* মোবাইলে টাইটেল একটু ছোট হবে */
+        line-height: 1.3;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+        padding: 0 15px; /* দুই পাশে একটু জায়গা রাখা */
+    }
+
+    /* Portfolio Grid Adjustment */
+    .portfolio-gallery-grid {
+        /* মোবাইলে কার্ডগুলো ছোট স্ক্রিনেও যাতে ভেঙে না যায় */
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    /* Image Height Reduction for Mobile */
+    .gallery-image-box {
+        height: 220px; /* মোবাইলে ছবির উচ্চতা একটু কমানো হলো */
+    }
+
+    /* Filter Buttons Stacking */
+    .filter-buttons {
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 13px; /* বাটন টেক্সট ছোট করা হলো */
+        border-width: 1px;
+    }
+
+    /* Info Box Adjustment */
+    .gallery-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .gallery-info p {
+        font-size: 0.85rem;
+    }
+}
+/* ------------------------------------ */
+/* --- PROFESSIONAL SERVICE PAGE CSS --- */
+/* ------------------------------------ */
+
+.service-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr; /* Sidebar 260px, Content Rest */
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+/* Sticky Sidebar */
+.service-sidebar {
+    position: sticky;
+    top: 100px; /* Header height offset */
+    height: fit-content;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 25px;
+    border: 1px solid #f0f0f0;
+}
+
+.service-sidebar h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+.service-nav a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    color: #555;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.service-nav a i {
+    width: 20px;
+    text-align: center;
+    color: #999;
+}
+
+.service-nav a:hover, .service-nav a.active {
+    background-color: #eef6ff;
+    color: #007bff;
+}
+
+.service-nav a:hover i, .service-nav a.active i {
+    color: #007bff;
+}
+
+/* Service Detail Boxes */
+.service-detail-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    border: 1px solid #f5f5f5;
+    scroll-margin-top: 100px; /* For smooth scroll positioning */
+}
+
+.service-text h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.service-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+/* Gallery Grid */
+.service-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.img-wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.img-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+/* CTA Button */
+.service-cta-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.service-cta-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .service-layout {
+        grid-template-columns: 1fr; /* Sidebar Stacked */
+    }
+    
+    .service-sidebar {
+        position: relative;
+        top: 0;
+        margin-bottom: 30px;
+    }
+    
+    .service-detail-box {
+        padding: 25px;
+    }
+}
+/* -------------------------------------- */
+/* --- CLIENTS & PARTNERS SECTION CSS --- */
+/* -------------------------------------- */
+
+.clients-partners-section {
+    padding: 50px 0;
+    background-color: #f8fbff; /* খুব হালকা নীল ব্যাকগ্রাউন্ড */
+    text-align: center;
+}
+
+.section-header-small h2 {
+    font-size: 1.5rem; /* ফন্ট ছোট রাখা হয়েছে */
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.underline-green {
+    width: 50px;
+    height: 3px;
+    background-color: #28a745; /* সবুজ দাগ */
+    margin: 0 auto 25px auto;
+    border-radius: 2px;
+}
+
+/* Logo Grid Layout */
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* অটো রেসপন্সিভ */
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px; /* বেশি ছড়াবে না */
+    margin: 0 auto;
+}
+
+/* Individual Logo Card */
+.logo-item {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    height: 80px; /* ফিক্সড হাইট */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.logo-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #28a745; /* হোভার করলে সবুজ বর্ডার */
+}
+
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* লোগো চ্যাপ্টা হবে না */
+    filter: grayscale(100%); /* শুরুতে সাদাকালো দেখাবে (প্রফেশনাল লুক) */
+    transition: filter 0.3s ease;
+    opacity: 0.8;
+}
+
+.logo-item:hover img {
+    filter: grayscale(0%); /* হোভার করলে কালার আসবে */
+    opacity: 1;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr); /* মোবাইলে ২টা করে দেখাবে */
+    }
+    .logo-item {
+        height: 70px;
+    }
+}
+/* --- PROFESSIONAL SLIM CTA SECTION --- */
+
+.cta-section-pro {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); /* প্রফেশনাল গ্রেডিয়েন্ট */
+    padding: 35px 0; /* প্যাডিং কমিয়ে স্লিম করা হয়েছে */
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* মোবাইলে যাতে ভেঙে নিচে আসে */
+    gap: 20px;
+}
+
+.cta-content h2 {
+    font-size: 1.8rem;
+    margin: 0 0 5px 0; /* মার্জিন কমানো হয়েছে */
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.cta-content h2::after {
+    display: none; /* আগের আন্ডারলাইন বাদ দেওয়া হয়েছে */
+}
+
+.cta-content p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+    max-width: 600px;
+}
+
+/* Button Styling */
+.cta-btn-pro {
+    background-color: #ffffff;
+    color: #007bff;
+    padding: 12px 30px;
+    border-radius: 50px; /* ক্যাপসুল শেপ */
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cta-btn-pro:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px); /* হোভার করলে একটু উপরে উঠবে */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .cta-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+    .cta-btn-pro {
+        width: 100%; /* মোবাইলে বাটন পুরোটা জুড়ে থাকবে */
+        justify-content: center;
+    }
+}
+/* --- NEW OFFERS PAGE CSS --- */
+
+/* Coupon Section (Top Small Cards) */
+.coupon-section {
+    padding: 40px 0;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.coupon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.coupon-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.coupon-card:hover { transform: translateY(-5px); }
+
+.highlight-card {
+    border: 2px solid #007bff;
+    background: #f0f8ff;
+}
+
+.coupon-icon { font-size: 30px; color: #007bff; margin-bottom: 10px; }
+.coupon-card h4 { margin: 0 0 5px; color: #333; font-size: 1.1rem; }
+.coupon-card p { font-size: 0.9rem; color: #666; margin-bottom: 15px; }
+
+.coupon-code-box {
+    display: flex;
+    justify-content: space-between;
+    background: #eee;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px dashed #999;
+}
+
+.coupon-code-box span { font-weight: bold; font-family: monospace; font-size: 1.1rem; }
+.coupon-code-box button { border: none; background: none; color: #007bff; font-weight: bold; cursor: pointer; }
+
+/* Main Detailed Offers */
+.offer-details-section { padding: 60px 0; }
+.offer-details-grid { display: flex; flex-direction: column; gap: 60px; }
+
+.offer-detail-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+}
+
+/* Reverse Layout for alternate look */
+.reverse-layout { direction: rtl; }
+.reverse-layout .offer-text-content { direction: ltr; }
+
+.offer-img-wrapper {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.offer-detail-card:hover img { transform: scale(1.05); }
+
+.offer-tag {
+    position: absolute;
+    top: 20px; left: 20px;
+    background: #ff4d4d;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+.offer-text-content { padding: 40px; }
+
+.offer-text-content h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.offer-text-content p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.offer-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.offer-features li {
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #444;
+}
+
+.offer-features i { color: #28a745; margin-right: 10px; }
+
+.offer-note {
+    font-style: italic;
+    color: #777;
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+
+.cta-button-small {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.cta-button-small:hover { background: #0056b3; }
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+    .offer-detail-card { grid-template-columns: 1fr; } /* Stack on mobile */
+    .reverse-layout { direction: ltr; } /* Reset direction */
+    .offer-img-wrapper { height: 250px; }
+    .offer-text-content { padding: 25px; }
+    .offer-text-content h3 { font-size: 1.5rem; }
+}
+/* --- HOME OFFER SECTION CSS --- */
+
+.home-offers-section {
+    padding: 60px 0;
+    background-color: #ffffff;
+}
+
+/* Header Styling */
+.section-header-center {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header-center h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.underline-green-center {
+    width: 80px;
+    height: 4px;
+    background-color: #28a745; /* সবুজ দাগ */
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+/* Grid Layout */
+.home-offer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* ৪টি কলাম */
+    gap: 20px;
+}
+
+/* Card Design */
+.home-offer-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+    display: block;
+}
+
+.home-offer-card:hover {
+    transform: translateY(-8px); /* হোভার করলে উপরে উঠবে */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border-color: #28a745;
+}
+
+/* Image Styling */
+.offer-img-box {
+    width: 100%;
+    height: 350px; /* ছবির হাইট ফিক্সড রাখা হয়েছে যাতে সব সমান দেখায় */
+    overflow: hidden;
+    background: #eee;
+}
+
+.offer-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ছবি পুরো বক্স জুড়ে থাকবে */
+    transition: transform 0.5s ease;
+}
+
+.home-offer-card:hover .offer-img-box img {
+    transform: scale(1.05); /* জুম ইফেক্ট */
+}
+
+/* Caption Styling */
+.home-offer-caption {
+    padding: 15px;
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+}
+
+.home-offer-card:hover .home-offer-caption {
+    color: #28a745;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .home-offer-grid {
+        grid-template-columns: repeat(2, 1fr); /* ট্যাবলেটে ২টা করে */
+    }
+}
+
+@media (max-width: 600px) {
+    .home-offer-grid {
+        grid-template-columns: 1fr; /* মোবাইলে ১টা করে */
+    }
+    .offer-img-box {
+        height: auto; /* মোবাইলে অটো হাইট */
+        aspect-ratio: 4/5; /* সুন্দর অনুপাত */
+    }
+}
+/* --- IMAGE BASED OFFER SECTION CSS --- */
+
+.home-offers-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.section-header-center { text-align: center; margin-bottom: 40px; }
+.section-header-center h2 { font-size: 2rem; color: #2c3e50; margin-bottom: 10px; font-weight: 700; }
+.underline-green-center { width: 80px; height: 4px; background-color: #28a745; margin: 0 auto; border-radius: 2px; }
+
+/* Grid Layout */
+.home-offer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* অটো রেসপন্সিভ */
+    gap: 20px;
+}
+
+/* Image Card Design */
+.home-offer-img-card {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden; /* ছবির কোণাগুলো গোল করার জন্য */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 250px; /* সব ছবির উচ্চতা সমান রাখা হলো */
+    border: 1px solid #eee;
+    background: #f9f9f9;
+}
+
+.home-offer-img-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ছবি পুরো বক্স জুড়ে থাকবে, চ্যাপ্টা হবে না */
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effects */
+.home-offer-img-card:hover {
+    transform: translateY(-5px); /* মাউস নিলে একটু উপরে উঠবে */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.home-offer-img-card:hover img {
+    transform: scale(1.05); /* হালকা জুম হবে */
+}
+/* Coupon Badge Styling (Red Label) */
+.coupon-card {
+    position: relative; /* এটি থাকতে হবে */
+    overflow: hidden;   /* এটিও থাকতে হবে */
+}
+
+.coupon-badge {
+    position: absolute !important; /* জোর করে পজিশন ঠিক করার জন্য */
+    top: 15px;
+    right: -30px; /* কোণায় বাঁকা করে দেখানোর জন্য */
+    background: #ff4d4d;
+    color: white;
+    padding: 5px 30px;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: rotate(45deg); /* ব্যাজটি ৪৫ ডিগ্রি বাঁকা হবে */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 10;
+}
+/* --- PRICE TABLE STYLES --- */
+.service-price-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.service-price-table th, .service-price-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.service-price-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+
+.service-price-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.service-price-table tr:hover {
+    background-color: #f1f1f1;
+}
+/* =========================================
+   BLOG POST MOBILE FIX (START HERE)
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    /* ১. ব্লগ লেআউট ফিক্স (কন্টেন্ট ও সাইডবার নিচে নিচে আসবে) */
+    .blog-page-container {
+        display: block !important; /* গ্রিড সরিয়ে ব্লক করা হলো */
+        padding: 0 15px;
+    }
+
+    .blog-post-full {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .blog-sidebar {
+        width: 100%;
+        margin-top: 30px;
+        border-top: 1px solid #eee;
+        padding-top: 30px;
+    }
+
+    /* ২. ইমেজ ফিক্স (ছবি যাতে স্ক্রিনের বাইরে না যায়) */
+    .blog-post-img-full, 
+    .post-content-body img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* ৩. প্রাইস টেবিল ফিক্স (টেবিল স্ক্রল করা যাবে) */
+    .price-table-container {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* ডানে-বামে স্ক্রল হবে */
+        -webkit-overflow-scrolling: touch; /* স্মুথ স্ক্রল */
+        margin-bottom: 20px;
+        border: 1px solid #eee;
+    }
+
+    .custom-table {
+        min-width: 600px; /* টেবিল যেন চ্যাপ্টা না হয়ে যায় */
+    }
+
+    /* ৪. ফন্ট সাইজ অ্যাডজাস্টমেন্ট */
+    .blog-post-full h1 {
+        font-size: 1.5rem; /* হেডিং ছোট করা হলো */
+        line-height: 1.3;
+    }
+
+    .post-content-body h3 {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .post-content-body p, 
+    .post-content-body li {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: left; /* জাস্টিফাই বাদ দেওয়া হলো পড়ার সুবিধার জন্য */
+    }
+
+    /* ৫. নোট বক্স ফিক্স */
+    .note-box, .calc-box {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+}
+/* মোবাইলে নীল বার চিকন করার কোড */
+@media screen and (max-width: 768px) {
+    .page-header {
+        padding-top: 30px !important;    /* উপরের ফাঁকা কমাবে */
+        padding-bottom: 30px !important; /* নিচের ফাঁকা কমাবে */
+    }
+
+    /* মোবাইলে লেখার সাইজও একটু ছোট হবে যাতে সুন্দর দেখায় */
+    .page-header h1 {
+        font-size: 22px !important;
+        margin-bottom: 10px;
+    }
+}
+/* Recent Work Ticker Design */
+.recent-work-ticker {
+    background-color: #333; /* বারের ব্যাকগ্রাউন্ড কালার (কালো) */
+    color: #fff;            /* লেখার কালার (সাদা) */
+    padding: 8px 0;
+    font-family: sans-serif;
+    overflow: hidden;
+    border-bottom: 2px solid #007bff; /* নিচে চিকন নীল বর্ডার */
+}
+
+.ticker-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px; /* আপনার সাইটের কন্টেইনার সাইজ অনুযায়ী */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.ticker-label {
+    background-color: #007bff; /* লেবেলের লাল/নীল ব্যাকগ্রাউন্ড */
+    padding: 2px 8px;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 3px;
+    margin-right: 10px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.ticker-text-wrap {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 30s linear infinite; /* লেখা চলার স্পিড */
+    margin: 0;
+    font-size: 14px;
+}
+
+/* এনিমেশন কোড */
+@keyframes scroll-left {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
+
+/* মোবাইলের জন্য একটু এডজাস্টমেন্ট */
+@media screen and (max-width: 768px) {
+    .recent-work-ticker {
+        font-size: 12px;
+    }
+    .ticker-label {
+        display: none; /* মোবাইলে স্পেস বাঁচাতে 'Recent Work' লেখাটা লুকিয়ে রাখা যেতে পারে */
+    }
+}
+/* Mobile Sticky Call Button Design (Small & Compact) */
+.mobile-sticky-footer {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-sticky-footer {
+        display: block;
+        position: fixed;
+        bottom: 15px; /* নিচ থেকে একটু কম গ্যাপ */
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        background: transparent;
+        padding: 0;
+        z-index: 9999;
+    }
+
+    .sticky-call-btn {
+        background: #28a745;
+        color: white;
+        font-size: 14px; /* ফন্ট সাইজ ছোট করা হলো */
+        font-weight: 600;
+        text-decoration: none;
+        padding: 8px 20px; /* বাটনের সাইজ বা প্যাডিং অনেক কমানো হলো */
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px; /* আইকন আর লেখার মাঝের গ্যাপ কমানো হলো */
+        box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3); /* শ্যাডো হালকা করা হলো */
+    }
+
+    /* হোয়াটসঅ্যাপ বাটনগুলো পজিশন ঠিক করা */
+    .whatsapp-float, .messenger-float {
+        bottom: 75px !important; 
+    }
+}
